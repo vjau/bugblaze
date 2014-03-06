@@ -1,0 +1,33 @@
+<head>
+  <title>bugblaze</title>
+</head>
+
+<body>
+
+
+  {{> outer_outer}}
+</body>
+
+<template name="bugblaze">
+
+
+</template>
+
+<template name="outer_outer">
+    <input type="button" id="show_button" value="show outer" />
+    {{helper}}
+    {{#if show_outer}}
+    {{> outer}}
+    {{/if}}
+    
+</template>
+
+<template name="outer">
+    {{helper}}
+    {{>inner}}
+</template>
+
+<template name="inner">
+    {{helper}}
+    <input type="button" id="hide_button" value="hide outer" />
+</template>
